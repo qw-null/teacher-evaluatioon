@@ -1,10 +1,10 @@
-# teacher-evaluation
+# teacher-evaluation 评教系统
 
-> A Vue.js project
+北京市中学学期教师评价系统
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm install
 

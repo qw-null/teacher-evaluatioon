@@ -1,18 +1,16 @@
 <template>
   <div style="margin-left: 8px;margin-right: 8px">
-    <div class="title bevel">2019-2020学年评教活动</div>
-    <div class="context" style="margin-left: 5%">——客观、公正、真诚地评价教师教学工作是你成熟的表现</div>
+    <div class="title bevel">2021-2022学年评教活动</div>
+    <div class="context" style="text-align:center;margin-bottom:2%;">—— 客观、公正、真诚地评价教师教学工作是你成熟的表现</div>
     <!--<div class="title2">——客观、公正、真诚地评价教师教学工作是你成熟的表现</div>-->
     <div class="context">
-      各位同学好！本学年的教学已经进行了四分之三，学校希望全面了解同学们对任课教师教学情况的感受。希望同学们以客观、公正的态度，根据自己的真实体会，认真填写调研问卷，对各学科任课教师的工作情况给予评价。（如果教师有调整，请对现在的任课教师进行评价。）
-
+      各位同学好！本学年的教学已接近尾声，学校希望全面了解同学们对任课教师教学情况的感受。希望同学们以客观、公正的态度，根据自己的真实体会，认真填写调研问卷，对各学科任课教师的工作情况给予评价。（如果教师有调整，请对现在的任课教师进行评价。）
     </div>
     <div class="context">
-      对每位任课教师的评价，首先是必填项目，包括师德修养、教学内容、作业辅导等，每一方面分为A/B/C/D四个等级，希望同学们认真阅读相关内容，进行评价；其次是选填项目，希望同学们能用几个关键词或三言两语，表达自己对学科教师的感受，或提出建议！
-    </div>
-    <div class="context" style="text-align: right">感谢同学们的真诚参与！</div>
+      对每位任课教师的评价，首先是必填项目，包括师德修养、教学内容、作业辅导等，每一方面分为A/B/C/D四个等级，希望同学们认真阅读相关内容，进行评价，表达自己对学科教师的感受！ </div>
+    <div class="context">感谢同学们的真诚参与！</div>
     <div class="context" style="text-align: right">北京市中关村中学课程教学处</div>
-    <div class="context" style="text-align: right">2020年6月</div>
+    <div class="context" style="text-align: right">2022年5月</div>
     <div class="line"></div>
     <div style="width: 100%">
       <div class="title2">
@@ -141,7 +139,7 @@
         width="80%"
         v-if="dialogVisible"
         >
-        <div style="font-size: 16px;font-weight: bold;text-indent: 2em;">你需要完成下列七道题，请滑动手机屏幕填选答案</div>
+        <div style="font-size: 16px;font-weight: bold;margin-bottom: 1%;">你需要完成下列七道题，请滑动手机屏幕填选答案</div>
         <el-form :model="form" :rules="rules" ref="form">
           <el-form-item prop="one_score">
             <div style="margin-bottom: 20px">
@@ -338,17 +336,51 @@
 
           <el-form-item prop="evaluation">
             <div style="margin-bottom: 20px">
-              <div>老师我想对您说：</div>
+              <div>七、线上教学</div>
               <div style="margin-top: 20px">
-                <el-input
-                  type="textarea"
-                  :rows="3"
-                  placeholder="请输入内容"
-                  v-model="form.evaluation">
-                </el-input>
+
+                <div style="width: 100%">
+                  <el-tag style="background-color: white;width: auto">
+                    <el-radio v-model="form.evaluation" label="A">A.学习资源丰富，教学方式灵活，作业批改反馈认真，教学效果好</el-radio>
+                  </el-tag>
+                </div>
+                <div style="width: 100%">
+                  <el-tag style="background-color: white;width: auto">
+                    <el-radio v-model="form.evaluation" label="B">B.学习资源适量，教学方式较灵活，作业批改及时，教学效果较好</el-radio>
+                  </el-tag>
+                </div>
+                <div style="width: 100%">
+                  <el-tag style="background-color: white;width: auto">
+                    <el-radio v-model="form.evaluation" label="C">C.提供一些学习资源，能够组织线上教学，批改作业，教学效果一般</el-radio>
+                  </el-tag>
+                </div>
+                <div style="width: 100%">
+                  <el-tag style="background-color: white;width: auto">
+                    <el-radio v-model="form.evaluation" label="D">D.学习资源不足，线上教学组织不松散，作业批改不认真，教学效果欠佳</el-radio>
+                  </el-tag>
+                </div>
+
+
+
+
+
               </div>
             </div>
           </el-form-item>
+
+<!--          <el-form-item prop="evaluation">-->
+<!--            <div style="margin-bottom: 20px">-->
+<!--              <div>老师我想对您说：</div>-->
+<!--              <div style="margin-top: 20px">-->
+<!--                <el-input-->
+<!--                  type="textarea"-->
+<!--                  :rows="3"-->
+<!--                  placeholder="请输入内容"-->
+<!--                  v-model="form.evaluation">-->
+<!--                </el-input>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </el-form-item>-->
 
           <div style="width: 100%;">
             <el-button type="primary" @click="Save('form')"  style="width: 100%">提交</el-button>
@@ -581,17 +613,51 @@
 
           <el-form-item prop="evaluation">
             <div style="margin-bottom: 20px">
-              <div>老师我想对您说：</div>
+              <div>七、线上教学</div>
               <div style="margin-top: 20px">
-                <el-input
-                  type="textarea"
-                  :rows="3"
-                  placeholder="请输入内容"
-                  v-model="form.evaluation">
-                </el-input>
+
+                <div style="width: 100%">
+                  <el-tag style="background-color: white;width: auto">
+                    <el-radio v-model="form.evaluation" label="A">A.学习资源丰富，教学方式灵活，作业批改反馈认真，教学效果好</el-radio>
+                  </el-tag>
+                </div>
+                <div style="width: 100%">
+                  <el-tag style="background-color: white;width: auto">
+                    <el-radio v-model="form.evaluation" label="B">B.学习资源适量，教学方式较灵活，作业批改及时，教学效果较好</el-radio>
+                  </el-tag>
+                </div>
+                <div style="width: 100%">
+                  <el-tag style="background-color: white;width: auto">
+                    <el-radio v-model="form.evaluation" label="C">C.提供一些学习资源，能够组织线上教学，批改作业，教学效果一般</el-radio>
+                  </el-tag>
+                </div>
+                <div style="width: 100%">
+                  <el-tag style="background-color: white;width: auto">
+                    <el-radio v-model="form.evaluation" label="D">D.学习资源不足，线上教学组织不松散，作业批改不认真，教学效果欠佳</el-radio>
+                  </el-tag>
+                </div>
+
+
+
+
+
               </div>
             </div>
           </el-form-item>
+
+<!--          <el-form-item prop="evaluation">-->
+<!--            <div style="margin-bottom: 20px">-->
+<!--              <div>老师我想对您说：</div>-->
+<!--              <div style="margin-top: 20px">-->
+<!--                <el-input-->
+<!--                  type="textarea"-->
+<!--                  :rows="3"-->
+<!--                  placeholder="请输入内容"-->
+<!--                  v-model="form.evaluation">-->
+<!--                </el-input>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </el-form-item>-->
 
           <div style="width: 100%;">
             <el-button type="primary" @click="Save2('form')" size="medium" style="width: 100%">提交</el-button>
@@ -1003,7 +1069,7 @@
 
   }
   .context{
-    margin-top: 10px;
+    margin: 10px;
     text-indent: 2em;
     letter-spacing: 1px;
     /*margin-left: 8px;*/
