@@ -1,6 +1,6 @@
 <template>
   <div style="margin-left: 8px;margin-right: 8px">
-    <div class="title bevel">2021-2022学年评教活动</div>
+    <div class="title bevel">2022-2023学年评教活动</div>
     <div
       class="context"
       style="text-align:center;margin-bottom:2%;"
@@ -19,7 +19,7 @@
     <div
       class="context"
       style="text-align: right"
-    >2022年5月</div>
+    >2023年5月</div>
     <div class="line"></div>
     <div style="width: 100%">
       <div class="title2">
@@ -1084,7 +1084,7 @@ export default {
               data = JSON.stringify(data);
               return data
             }],
-            url: 'https://zhongkeruitong.top/taq/insert_evaluation',
+            url: 'http://58.119.112.14:11029/insert_evaluation',
             method: 'post',
             params: {
               stu_code: this.stu_code,
@@ -1146,7 +1146,7 @@ export default {
               data = JSON.stringify(data);
               return data
             }],
-            url: 'https://zhongkeruitong.top/taq/insert_evaluation',
+            url: 'http://58.119.112.14:11029/insert_evaluation',
             method: 'post',
             params: {
               stu_code: this.stu_code,
@@ -1181,7 +1181,7 @@ export default {
     },
     // 获得到老师列表
     getTeacher () {
-      var url = 'https://zhongkeruitong.top/taq/get_teacher'
+      var url = 'http://58.119.112.14:11029/get_teacher'
       this.$axios.post(url, this.$qs.stringify({
         stu_code: this.stu_code
       })).then((res) => {
